@@ -510,8 +510,8 @@ span {
   display: block;
 }
 
-.examples-link:hover,
-.examples-link:focus {
+.link-thumb:hover,
+.link-thumb:focus {
   box-shadow: 0 4px 4px 0 var(--primary-text-color);
 }
 .card {
@@ -556,4 +556,39 @@ span {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+}
+
+/*Оверлей на карточках*/
+.img-thumb {
+  position: relative;
+}
+.img-thumb::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.overlay > p {
+  color: var(--background-color);
+  padding: 63px 24px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.link-thumb:hover .overlay,
+.link-thumb:focus .overlay {
+  opacity: 0.9;
+}
+.link-thumb:hover .img-thumb::before {
+  opacity: 1;
 }
