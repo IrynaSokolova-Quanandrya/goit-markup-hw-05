@@ -207,6 +207,7 @@ span {
   padding: 10px 32px;
   min-width: 200px;
   margin-top: 0px;
+  border: none;
 
   color: var(--background-color);
   background-color: var(--accent-color);
